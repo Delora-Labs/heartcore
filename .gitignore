@@ -1,0 +1,8 @@
+/vendor/
+/composer.phar
+/storage/*.log
+.DS_Store
+Thumbs.db
+
+# Source photos & supplied docs — not committed; processed copies live in public/assets/img
+/data/

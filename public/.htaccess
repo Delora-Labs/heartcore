@@ -1,0 +1,27 @@
+# HeartCore — route everything through Flight, serve real files directly.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Serve existing files/directories as-is (assets, etc.)
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else -> front controller
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+# Cache static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>
+
+# Don't serve the message log or dotfiles
+<FilesMatch "\.(log|md|json|lock)$">
+    Require all denied
+</FilesMatch>
