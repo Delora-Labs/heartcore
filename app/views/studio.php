@@ -40,19 +40,23 @@ endif;
 
 /* Voždovac — full studio page */
 ?>
-<main style="padding-top:100px">
-  <section class="bg-white" style="padding-block:60px 80px">
-    <div class="hc-container">
-      <div class="hc-crumb">
-        <a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span>—</span><span>Studiji</span><span>—</span><span class="cur"><?= hc_e($s['place']) ?></span>
+<main style="padding-top:0">
+  <section style="position:relative;min-height:80vh;color:var(--hc-white)">
+    <div style="position:absolute;inset:0;overflow:hidden">
+      <?= hc_photo(['src' => $s['hero'], 'ratio' => 'auto', 'variant' => 'dark', 'eager' => true, 'alt' => $s['name'] . ' — ' . $s['place'], 'style' => 'width:100%;height:100%']) ?>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.15) 30%,rgba(0,0,0,.55) 100%)"></div>
+    </div>
+    <div style="position:relative;min-height:80vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(60px,10vh,120px);padding-top:200px">
+      <div class="hc-container">
+        <div class="hc-crumb hc-crumb--light" style="margin-bottom:32px">
+          <a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span>—</span><span>Studiji</span><span>—</span><span class="cur"><?= hc_e($s['place']) ?></span>
+        </div>
+        <div <?= hc_reveal(150) ?>><?= hc_eyebrow($s['tagline'], true) ?></div>
+        <h1 <?= hc_reveal(300, 'hc-title hc-title--xl hc-title--light') ?> style="margin-top:28px"><?= hc_e($s['name']) ?><br><em><?= hc_e($s['place']) ?>.</em></h1>
+        <p <?= hc_reveal(500) ?> style="margin-top:32px;max-width:680px;font-size:17px;line-height:1.7;color:rgba(250,250,250,.85)"><?= hc_e($s['lead']) ?></p>
       </div>
-      <h1 <?= hc_reveal(0, 'hc-title hc-title--xl') ?> style="margin-top:40px"><?= hc_e($s['name']) ?><br><em><?= hc_e($s['place']) ?>.</em></h1>
-      <p <?= hc_reveal(150) ?> style="margin-top:32px;max-width:680px;font-size:17px;line-height:1.7;color:var(--hc-grey-700)"><?= hc_e($s['lead']) ?></p>
     </div>
   </section>
-
-  <!-- change request #3: real studio photo -->
-  <section><?= hc_photo(['src' => $s['hero'], 'ratio' => '21 / 9', 'variant' => 'dark', 'style' => 'width:100%', 'alt' => $s['name'] . ' — ' . $s['place']]) ?></section>
 
   <section class="hc-section bg-white">
     <div class="hc-container">
@@ -77,9 +81,9 @@ endif;
   <section class="hc-section bg-paper">
     <div class="hc-container">
       <?= hc_eyebrow('Galerija') ?>
-      <h2 class="hc-title hc-title--md" style="margin-top:16px;margin-bottom:56px">Prostor.</h2>
+      <h2 class="hc-title hc-title--md" style="margin-top:16px;margin-bottom:56px">Profesionalni prostor sa potpunom opremom.</h2>
       <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:16px" data-gallery>
-        <?= hc_photo(['src' => $s['photos'][1], 'ratio' => '4 / 3', 'alt' => $s['place'] . ' — studio']) ?>
+        <?= hc_photo(['src' => $s['photos'][1], 'ratio' => '3 / 4', 'alt' => $s['place'] . ' — studio']) ?>
         <div class="grid" style="grid-template-rows:1fr 1fr;gap:16px">
           <?= hc_photo(['src' => $s['photos'][2], 'ratio' => 'auto', 'variant' => 'sand', 'style' => 'height:100%', 'alt' => $s['place'] . ' — oprema']) ?>
           <?= hc_photo(['src' => $s['photos'][3], 'ratio' => 'auto', 'style' => 'height:100%', 'alt' => $s['place'] . ' — detalj']) ?>

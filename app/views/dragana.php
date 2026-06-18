@@ -36,7 +36,7 @@
   </section>
 
   <!-- REFERENCES — change request #17: bullets, but framed and as squares -->
-  <section class="hc-section bg-paper">
+  <section class="hc-section" style="background:var(--hc-paper2)">
     <div class="hc-container">
       <div class="section-head" style="margin-bottom:48px">
         <div <?= hc_reveal() ?>>
@@ -44,12 +44,13 @@
           <h2 class="hc-title hc-title--md" style="margin-top:16px">Edukacije i seminari.</h2>
         </div>
       </div>
-      <div class="ref-grid">
+      <div class="ref-timeline">
         <?php foreach ($d['references'] as $i => [$year, $text]): ?>
-          <article class="ref-card hc-fade" data-delay="<?= ($i % 3) * 70 ?>">
-            <span class="ref-card__year"><?= hc_e($year) ?></span>
-            <span class="ref-card__text"><?= hc_e($text) ?></span>
-          </article>
+          <div class="ref-row hc-fade" data-delay="<?= $i * 50 ?>">
+            <span class="ref-row__year"><?= hc_e($year) ?></span>
+            <span class="ref-row__dot"><?= hc_diamond(6, 'var(--hc-clay)') ?></span>
+            <span class="ref-row__text"><?= hc_e($text) ?></span>
+          </div>
         <?php endforeach; ?>
       </div>
     </div>

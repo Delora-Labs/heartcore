@@ -26,7 +26,7 @@ return [
                 'Wunda Chair · Barrels',
                 'Klasični i savremeni pilates',
             ],
-            'photos'  => ['studio-2', 'studio-1', 'studio-3', 'studio-4'],
+            'photos'  => ['studio-2', 'studio-1', 'studio-2', 'studio-4'],
             'hero'    => 'studio-vozdovac-wide',
         ],
         'dedinje' => [

@@ -25,7 +25,7 @@
             <?php endforeach; ?>
           </div>
         </div>
-        <div <?= hc_reveal(150) ?>><?= hc_photo(['src' => 'pose-1', 'ratio' => '3 / 4', 'alt' => 'Pilates — kontrola i preciznost']) ?></div>
+        <div <?= hc_reveal(150) ?>><?= hc_photo(['src' => 'dynamic-3', 'ratio' => '3 / 4', 'alt' => 'Pilates — kontrola i preciznost']) ?></div>
       </div>
     </div>
   </section>
@@ -37,7 +37,7 @@
         <div>
           <div <?= hc_reveal() ?>>
             <!-- No archival Joseph Pilates photo was supplied; labelled placeholder until one is provided (change request #11). -->
-            <?= hc_photo(['src' => null, 'ratio' => '3 / 4', 'label' => 'Arhivska fotografija · uskoro', 'variant' => 'dark']) ?>
+            <?= hc_photo(['src' => 'joseph', 'ratio' => '3 / 4', 'variant' => 'dark', 'alt' => 'Joseph H. Pilates']) ?>
           </div>
           <div <?= hc_reveal(150) ?> style="margin-top:20px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--hc-grey-500)">Joseph H. Pilates · 1883 — 1967</div>
         </div>
