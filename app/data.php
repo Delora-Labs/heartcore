@@ -140,16 +140,19 @@ return [
         [
             'name' => 'Iva',
             'role' => 'Instruktor savremenog pilatesa',
+            'photo' => 'jana-canva',
             'bio'  => 'Iva je ljubav prema pilatesu otkrila prvo kao dugogodišnji vežbač kod Dragane u studiju. Vodi grupne časove savremenog pilatesa koji donose prepoznatljivu energiju, pozitivnu atmosferu i motivaciju. Završila je osnovne studije psihologije i trenutno je na master studijama, što joj omogućava da duboko razume potrebe svojih klijenata i prilagodi svaki čas njihovim individualnim ciljevima.',
         ],
         [
             'name' => 'Milena',
             'role' => 'Instruktor savremenog · učitelj klasičnog pilatesa u obuci',
+            'photo' => 'team-milena',
             'bio'  => 'Milena je po struci advokat, a svoju profesionalnu preciznost i analitičnost uspešno prenosi u rad sa telom. Njeni časovi savremenog pilatesa odlikuju se jasnom strukturom, pažljivo vođenim sekvencama i snažnim fokusom na pravilnu tehniku. Trenutno je na edukaciji za klasični pilates, što njenim časovima daje dodatnu dubinu i doslednost originalnim principima metode.',
         ],
         [
             'name' => 'Jana',
             'role' => 'Instruktor savremenog · učitelj klasičnog pilatesa u obuci',
+            'photo' => 'team-jana',
             'bio'  => 'Jana je instruktorka sa strašću za pilatesom, koja svojim pristupom inspiriše i motiviše svakog vežbača. Vodi grupne časove savremenog pilatesa, a trenutno je i na edukaciji za klasični pilates — što njenim časovima daje posebnu preciznost i fokus na pravilno izvođenje. Kroz motivaciju i pažljiv pristup, ostavlja vežbače sa snažnim osećajem postignuća i zadovoljstva.',
         ],
     ],

@@ -44,12 +44,9 @@
           <h2 class="hc-title hc-title--md" style="margin-top:16px">Edukacije i seminari.</h2>
         </div>
       </div>
-      <div class="ref-grid">
-        <?php foreach ($d['references'] as $i => [$year, $text]): ?>
-          <article class="ref-card hc-fade" data-delay="<?= ($i % 3) * 70 ?>">
-            <span class="ref-card__year"><?= hc_e($year) ?></span>
-            <span class="ref-card__text"><?= hc_e($text) ?></span>
-          </article>
+      <div class="ref-pills" <?= hc_reveal(100) ?>>
+        <?php foreach ($d['references'] as [$year, $text]): ?>
+          <span class="ref-pill"><em><?= hc_e($year) ?></em> <?= hc_e($text) ?></span>
         <?php endforeach; ?>
       </div>
     </div>

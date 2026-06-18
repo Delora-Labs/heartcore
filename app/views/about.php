@@ -75,8 +75,11 @@
       <div class="team-grid">
         <?php foreach ($data['team'] as $i => $tm): ?>
           <article <?= hc_reveal($i * 80) ?>>
-            <!-- Individual instructor portraits not supplied; brand monogram placeholder until provided. -->
-            <div class="team-card__photo team-monogram"><span><?= hc_e(mb_substr($tm['name'], 0, 1)) ?></span></div>
+            <?php if (!empty($tm['photo'])): ?>
+              <?= hc_photo(['src' => $tm['photo'], 'ratio' => '4 / 5', 'alt' => $tm['name'], 'class' => ($tm['name'] === 'Iva' ? 'hc-photo--top' : '')]) ?>
+            <?php else: ?>
+              <div class="team-card__photo team-monogram"><span><?= hc_e(mb_substr($tm['name'], 0, 1)) ?></span></div>
+            <?php endif; ?>
             <div style="margin-top:20px">
               <h3 class="team-card__name"><?= hc_e($tm['name']) ?></h3>
               <div class="team-card__role"><?= hc_e($tm['role']) ?></div>
