@@ -11,10 +11,10 @@
       <div class="hc-container">
         <div <?= hc_reveal(150) ?>><?= hc_eyebrow('Boutique pilates · Beograd', true) ?></div>
         <h1 <?= hc_reveal(300, 'hc-title hc-title--xl hc-title--light') ?> style="margin-top:28px;max-width:1100px">
-          Pokret koji se<br><em>vraća sebi.</em>
+          Pokret koji te<br><em>vraća sebi.</em>
         </h1>
         <p <?= hc_reveal(500) ?> style="margin-top:32px;max-width:560px;font-size:15px;line-height:1.7;color:rgba(250,250,250,.85)">
-          Pilates kao praksa pažnje, snage i preciznosti — klasični i savremeni, na originalnoj opremi. Časovi u malim grupama i individualno, u studiju posvećenom autentičnoj metodi.
+          Klasičan i savremeni pilates na originalnoj opremi. Individualni časovi i male grupe u boutique studiju posvećenom autentičnoj metodi.
         </p>
         <div <?= hc_reveal(700) ?> style="margin-top:44px;display:flex;gap:16px;flex-wrap:wrap">
           <?= hc_btn('kontakt', 'Zakažite čas', 'invert') ?>
