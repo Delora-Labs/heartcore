@@ -1,29 +1,29 @@
 <?php /** @var array $data @var array $config */ ?>
 <main>
   <!-- HERO -->
-  <section style="position:relative;min-height:100vh;color:var(--hc-white)">
+  <section style="position:relative;height:100vh;min-height:600px;color:var(--hc-white);overflow:hidden">
     <div style="position:absolute;inset:0;overflow:hidden">
-      <?= hc_photo(['src' => 'hero', 'ratio' => 'auto', 'variant' => 'dark', 'eager' => true, 'alt' => 'HeartCore pilates studio — Voždovac', 'style' => 'width:100%;height:100%']) ?>
-      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,.15) 30%,rgba(0,0,0,.55) 100%)"></div>
+      <?= hc_photo(['src' => 'dynamic-1', 'ratio' => 'auto', 'variant' => 'dark', 'eager' => true, 'alt' => 'HeartCore pilates studio - Voždovac', 'style' => 'width:100%;height:100%']) ?>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.38) 38%,rgba(0,0,0,.82) 100%)"></div>
     </div>
 
-    <div style="position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(80px,12vh,140px);padding-top:200px">
+    <div style="position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(28px,4.5vh,56px);padding-top:clamp(88px,12vh,140px)">
       <div class="hc-container">
         <div <?= hc_reveal(150) ?>><?= hc_eyebrow('Boutique pilates · Beograd', true) ?></div>
-        <h1 <?= hc_reveal(300, 'hc-title hc-title--xl hc-title--light') ?> style="margin-top:28px;max-width:1100px">
+        <h1 <?= hc_reveal(300, 'hc-title hc-title--xl hc-title--light') ?> style="margin-top:clamp(16px,2.4vh,28px);max-width:1100px;font-size:clamp(46px,min(10.5vw,12.5vh),168px)">
           Pokret koji te<br><em>vraća sebi.</em>
         </h1>
-        <p <?= hc_reveal(500) ?> style="margin-top:32px;max-width:560px;font-size:15px;line-height:1.7;color:rgba(250,250,250,.85)">
+        <p <?= hc_reveal(500) ?> style="margin-top:clamp(16px,2.4vh,32px);max-width:560px;font-size:15px;line-height:1.7;color:rgba(250,250,250,.85)">
           Klasičan i savremeni pilates na originalnoj opremi. Individualni časovi i male grupe u boutique studiju posvećenom autentičnoj metodi.
         </p>
-        <div <?= hc_reveal(700) ?> style="margin-top:44px;display:flex;gap:16px;flex-wrap:wrap">
+        <div <?= hc_reveal(700) ?> style="margin-top:clamp(22px,3vh,44px);display:flex;gap:16px;flex-wrap:wrap">
           <?= hc_btn('kontakt', 'Zakažite čas', 'invert') ?>
           <?= hc_btn('usluge', 'Pogledajte usluge', 'ghost-light') ?>
         </div>
       </div>
 
-      <div class="hc-container" style="margin-top:clamp(60px,12vh,120px)">
-        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;padding-top:28px;border-top:1px solid rgba(250,250,250,.18)">
+      <div class="hc-container" style="margin-top:clamp(28px,4.5vh,72px)">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;padding-top:clamp(18px,2.5vh,28px);border-top:1px solid rgba(250,250,250,.18)">
           <div style="display:flex;gap:56px;flex-wrap:wrap">
             <div>
               <div style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,250,250,.5)">Studio I</div>
@@ -35,7 +35,8 @@
             </div>
             <div>
               <div style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,250,250,.5)">Otvoreno</div>
-              <div class="hc-serif" style="font-size:22px;margin-top:6px">Pon—Pet · 08—22h</div>
+              <div class="hc-serif" style="font-size:22px;margin-top:6px">Pon - Pet · 08 - 22h</div>
+              <div class="hc-serif" style="font-size:16px;margin-top:2px;color:rgba(250,250,250,.6)">Sub i Ned · 09 - 15h</div>
             </div>
           </div>
           <div style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,250,250,.4)">Scroll ↓</div>
@@ -61,7 +62,7 @@
           </h2>
           <div <?= hc_reveal(250) ?> class="grid two-col" style="margin-top:40px;grid-template-columns:1.4fr 1fr;gap:clamp(32px,4vw,56px);align-items:start">
             <p style="font-size:16px;line-height:1.85;color:var(--hc-grey-700)">
-              HeartCore je nastao iz uverenja da pilates nije trend, već praksa — disciplinovana, elegantna i duboko lična. Kroz pažljivo vođene časove i rad na originalnoj opremi, vraćamo telu njegovu prirodnu inteligenciju.
+              HeartCore je nastao iz uverenja da pilates nije trend, već praksa, disciplinovana, elegantna i duboko lična. Kroz pažljivo vođene časove i rad na originalnoj opremi, vraćamo telu njegovu prirodnu inteligenciju.
             </p>
             <div class="notice">
               <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--hc-grey-700);margin-bottom:10px">Šest principa</div>
@@ -133,10 +134,10 @@
       </div>
 
       <div class="loc-grid">
-        <?php foreach (['vozdovac', 'dedinje'] as $i => $key): $loc = $data['studios'][$key]; ?>
+        <?php foreach (['vozdovac', 'dedinje'] as $i => $key): $loc = $data['studios'][$key]; $clickable = !empty($loc['open']); ?>
           <article class="loc-card hc-fade" data-delay="100">
-            <a href="<?= hc_e(hc_url($key)) ?>" style="display:block">
-              <?= hc_photo(['src' => $loc['photos'][0], 'ratio' => '4 / 3', 'variant' => 'dark', 'alt' => $loc['name'] . ' — ' . $loc['place']]) ?>
+            <?php if ($clickable): ?><a href="<?= hc_e(hc_url($key)) ?>" style="display:block"><?php else: ?><div style="display:block"><?php endif; ?>
+              <?= hc_photo(['src' => $loc['photos'][0], 'ratio' => '4 / 3', 'variant' => 'dark', 'alt' => $loc['name'] . ' - ' . $loc['place']]) ?>
               <div class="loc-card__meta">
                 <div>
                   <div class="loc-card__no"><?= $i === 0 ? 'I.' : 'II.' ?> <?= hc_e(mb_strtoupper($loc['place'])) ?></div>
@@ -147,9 +148,8 @@
               <p><?= hc_e($loc['lead']) ?></p>
               <div class="loc-card__foot">
                 <span style="font-size:12px;color:rgba(250,250,250,.6)"><?= hc_e($loc['addr']) ?></span>
-                <span style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--hc-white)">Saznajte više →</span>
               </div>
-            </a>
+            <?php if ($clickable): ?></a><?php else: ?></div><?php endif; ?>
           </article>
         <?php endforeach; ?>
       </div>
@@ -162,7 +162,7 @@
       <div <?= hc_reveal() ?>><?= hc_diamond(12, 'var(--hc-grey-700)') ?></div>
       <h2 <?= hc_reveal(150, 'hc-title hc-title--md') ?> style="margin-top:32px">Prvi čas je<br><em>uvod u praksu.</em></h2>
       <p <?= hc_reveal(300) ?> style="margin-top:28px;max-width:540px;margin-inline:auto;font-size:16px;line-height:1.75;color:var(--hc-grey-700)">
-        Razgovor o vašem telu, ciljevima i ritmu — pre nego što počnemo. Javite nam se i preporučićemo program koji vam najviše odgovara.
+        Razgovor o vašem telu, ciljevima i ritmu, pre nego što počnemo. Javite nam se i preporučićemo program koji vam najviše odgovara.
       </p>
       <div <?= hc_reveal(450) ?> style="margin-top:44px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
         <?= hc_btn('kontakt', 'Zakažite čas') ?>

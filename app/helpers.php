@@ -1,6 +1,6 @@
 <?php
 /**
- * HeartCore — view helpers. Loaded globally via composer "files" autoload.
+ * HeartCore - view helpers. Loaded globally via composer "files" autoload.
  * Small, dependency-free functions for escaping, URLs and the repeating
  * markup atoms ported from the original prototype (photo, eyebrow, diamond…).
  */
@@ -38,7 +38,7 @@ if (!function_exists('hc_e')) {
     function hc_asset(string $path): string
     {
         $path = ltrim($path, '/');
-        $full = dirname(__DIR__) . '/public/assets/' . $path;
+        $full = dirname(__DIR__) . '/assets/' . $path;
         $v = @filemtime($full) ?: 1;
         return '/assets/' . $path . '?v=' . $v;
     }

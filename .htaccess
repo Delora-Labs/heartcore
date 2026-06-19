@@ -1,4 +1,4 @@
-# HeartCore — route everything through Flight, serve real files directly.
+# HeartCore - route everything through Flight, serve real files directly.
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /

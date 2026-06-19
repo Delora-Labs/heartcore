@@ -1,4 +1,4 @@
-/* HeartCore — progressive enhancement. The site is fully server-rendered;
+/* HeartCore - progressive enhancement. The site is fully server-rendered;
    this only adds the motion/interaction the original prototype had. */
 (function () {
   "use strict";

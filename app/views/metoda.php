@@ -2,7 +2,7 @@
 <main style="padding-top:100px">
   <section class="hc-section bg-white" style="padding-top:60px">
     <div class="hc-container">
-      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span>—</span><span class="cur">O Pilates metodi</span></div>
+      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span> - </span><span class="cur">O Pilates metodi</span></div>
       <div <?= hc_reveal() ?>><?= hc_eyebrow('Metoda', false, 'margin-top:40px;display:block') ?></div>
       <h1 <?= hc_reveal(100, 'hc-title hc-title--xl') ?> style="margin-top:24px;max-width:1100px">Sto godina<br><em>jednog pokreta.</em></h1>
       <p <?= hc_reveal(250) ?> style="margin-top:36px;font-size:18px;line-height:1.7;color:var(--hc-grey-700);max-width:760px"><?= hc_e($m['intro']) ?></p>
@@ -10,22 +10,22 @@
     </div>
   </section>
 
-  <!-- SIX PRINCIPLES + photos (change request #10) -->
+  <!-- SIX PRINCIPLES — numbered index list (change request #10) -->
   <section class="bg-cream" style="padding-block:clamp(48px,6vw,80px)">
     <div class="hc-container">
-      <div class="grid two-col" style="grid-template-columns:1.3fr 1fr;gap:clamp(32px,5vw,72px);align-items:center">
+      <div class="grid two-col" style="grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center">
         <div>
-          <?= hc_eyebrow('Šest principa') ?>
-          <div style="margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+          <div <?= hc_reveal() ?>><?= hc_eyebrow('Šest principa pilatesa') ?></div>
+          <ol class="principle-index">
             <?php foreach ($m['principles'] as $i => $p): ?>
-              <div <?= hc_reveal($i * 70) ?> style="border-top:1px solid var(--hc-grey-300);padding-top:14px">
-                <span class="hc-serif hc-italic" style="font-size:22px;color:var(--hc-clay)"><?= sprintf('%02d', $i + 1) ?></span>
-                <div style="margin-top:6px;font-size:14px;letter-spacing:.04em;color:var(--hc-grey-700)"><?= hc_e($p) ?></div>
-              </div>
+              <li <?= hc_reveal(60 + $i * 60) ?>>
+                <span class="principle-index__no"><?= sprintf('%02d', $i + 1) ?></span>
+                <span class="principle-index__name"><?= hc_e($p) ?></span>
+              </li>
             <?php endforeach; ?>
-          </div>
+          </ol>
         </div>
-        <div <?= hc_reveal(150) ?>><?= hc_photo(['src' => 'dynamic-3', 'ratio' => '3 / 4', 'alt' => 'Pilates — kontrola i preciznost']) ?></div>
+        <div <?= hc_reveal(150) ?>><?= hc_photo(['src' => 'dynamic-3', 'ratio' => '4 / 5', 'alt' => 'Pilates - kontrola i preciznost']) ?></div>
       </div>
     </div>
   </section>
@@ -39,7 +39,7 @@
             <!-- No archival Joseph Pilates photo was supplied; labelled placeholder until one is provided (change request #11). -->
             <?= hc_photo(['src' => 'joseph', 'ratio' => '3 / 4', 'variant' => 'dark', 'alt' => 'Joseph H. Pilates']) ?>
           </div>
-          <div <?= hc_reveal(150) ?> style="margin-top:20px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--hc-grey-500)">Joseph H. Pilates · 1883 — 1967</div>
+          <div <?= hc_reveal(150) ?> style="margin-top:20px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--hc-grey-500)">Joseph H. Pilates · 1883 - 1967</div>
         </div>
         <div>
           <div <?= hc_reveal() ?>><?= hc_eyebrow('Tvorac metode') ?></div>

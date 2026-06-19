@@ -5,7 +5,7 @@ $other = $data['education'][$otherKey];
 <main style="padding-top:100px">
   <section class="hc-section bg-white" style="padding-top:60px">
     <div class="hc-container">
-      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span>—</span><span>Edukacija</span><span>—</span><span class="cur"><?= hc_e($e['title']) ?></span></div>
+      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span> - </span><span>Edukacija</span><span> - </span><span class="cur"><?= hc_e($e['title']) ?></span></div>
       <div <?= hc_reveal() ?>><?= hc_eyebrow($e['subtitle'], false, 'margin-top:40px;display:block') ?></div>
       <h1 <?= hc_reveal(100, 'hc-title hc-title--lg') ?> style="margin-top:24px;max-width:1200px"><?= hc_e($e['title']) ?>.</h1>
       <p <?= hc_reveal(200) ?> style="margin-top:32px;font-size:17px;line-height:1.75;color:var(--hc-grey-700);max-width:740px"><?= hc_e($e['intro']) ?></p>

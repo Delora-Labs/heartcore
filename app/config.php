@@ -8,7 +8,7 @@
 return [
     'name'        => 'HeartCore Studio',
     'tagline'     => 'Boutique pilates · Beograd',
-    'description' => 'HeartCore je pilates studio u Beogradu posvećen očuvanju autentične pilates metode — klasični i savremeni pilates, individualni i grupni časovi na originalnoj opremi.',
+    'description' => 'HeartCore je pilates studio u Beogradu posvećen očuvanju autentične pilates metode, klasični i savremeni pilates, individualni i grupni časovi na originalnoj opremi.',
     'locale'      => 'sr_RS',
     'lang'        => 'sr',
 
@@ -20,8 +20,8 @@ return [
         'phone_href'    => '+38162226622',
         'email'         => 'kanjevac.dragana@gmail.com',
         'hours'         => [
-            ['Ponedeljak — Petak', '08:00 — 22:00'],
-            ['Subota i Nedelja',   '09:00 — 15:00'],
+            ['Ponedeljak - Petak', '08:00 - 22:00'],
+            ['Subota i Nedelja',   '09:00 - 15:00'],
         ],
     ],
 

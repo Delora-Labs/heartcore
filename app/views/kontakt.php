@@ -9,11 +9,11 @@ $val = fn($k) => hc_e($v[$k] ?? '');
 <main style="padding-top:100px">
   <section class="hc-section bg-white" style="padding-top:60px">
     <div class="hc-container">
-      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span>—</span><span class="cur">Kontakt</span></div>
+      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span> - </span><span class="cur">Kontakt</span></div>
       <div <?= hc_reveal() ?>><?= hc_eyebrow('Pišite nam', false, 'margin-top:40px;display:block') ?></div>
       <h1 <?= hc_reveal(100, 'hc-title hc-title--xl') ?> style="margin-top:24px">Razgovor pre<br><em>prvog časa.</em></h1>
       <p <?= hc_reveal(200) ?> style="margin-top:32px;font-size:17px;line-height:1.75;color:var(--hc-grey-700);max-width:640px">
-        Pošaljite poruku — javljamo se u toku istog dana. Ostavite par redova o tome šta tražite i preporučićemo termin i program koji vam najviše odgovaraju.
+        Pošaljite poruku, javljamo se u toku istog dana. Ostavite par redova o tome šta tražite i preporučićemo termin i program koji vam najviše odgovaraju.
       </p>
     </div>
   </section>
@@ -86,7 +86,7 @@ $val = fn($k) => hc_e($v[$k] ?? '');
           <?= hc_eyebrow('Kontakt informacije') ?>
           <div style="margin-top:32px;display:flex;flex-direction:column;gap:36px">
             <div class="contact-block">
-              <h3>HeartCore — Voždovac</h3>
+              <h3>HeartCore - Voždovac</h3>
               <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px">
                 <div class="row"><span>Adresa</span><span>Vojvode Stepe 259, Beograd</span></div>
                 <div class="row"><span>Telefon</span><span><a href="tel:<?= hc_e($c['phone_href']) ?>"><?= hc_e($c['phone_display']) ?></a></span></div>
@@ -97,7 +97,7 @@ $val = fn($k) => hc_e($v[$k] ?? '');
               </div>
             </div>
             <div class="contact-block">
-              <h3>HeartCore Classical — Dedinje</h3>
+              <h3>HeartCore Classical - Dedinje</h3>
               <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px">
                 <div class="row"><span>Adresa</span><span>Dedinje, Beograd</span></div>
                 <div class="row"><span>Status</span><span>Uskoro otvaramo</span></div>
@@ -110,7 +110,7 @@ $val = fn($k) => hc_e($v[$k] ?? '');
   </section>
 
   <section class="bg-black">
-    <iframe title="HeartCore — Voždovac, Beograd" width="100%" height="460" style="border:0;display:block;filter:grayscale(1) contrast(.9) sepia(.15)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    <iframe title="HeartCore - Voždovac, Beograd" width="100%" height="460" style="border:0;display:block;filter:grayscale(1) contrast(.9) sepia(.15)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
       src="https://maps.google.com/maps?q=<?= rawurlencode('Vojvode Stepe 259, Beograd') ?>&output=embed"></iframe>
   </section>
 </main>

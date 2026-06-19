@@ -31,11 +31,11 @@ $icons = [
         <?= hc_eyebrow('Studiji', true) ?>
         <div class="hc-footer__loc">
           <div>
-            <div class="hc-footer__loc-name">HeartCore — Voždovac</div>
+            <div class="hc-footer__loc-name">HeartCore - Voždovac</div>
             <p class="hc-footer__small">Vojvode Stepe 259<br>11000 Beograd</p>
           </div>
           <div>
-            <div class="hc-footer__loc-name">HeartCore Classical — Dedinje</div>
+            <div class="hc-footer__loc-name">HeartCore Classical - Dedinje</div>
             <p class="hc-footer__small">Dedinje, Beograd<br><em>Uskoro</em></p>
           </div>
         </div>
@@ -46,7 +46,7 @@ $icons = [
         <div class="hc-footer__contact">
           <a href="mailto:<?= hc_e($c['email']) ?>"><?= hc_e($c['email']) ?></a>
           <a href="tel:<?= hc_e($c['phone_href']) ?>"><?= hc_e($c['phone_display']) ?></a>
-          <span>Pon — Pet · 08—22h · Sub i Ned · 09—15h</span>
+          <span>Pon - Pet · 08 - 22h · Sub i Ned · 09 - 15h</span>
         </div>
         <div style="margin-top:36px">
           <?= hc_eyebrow('Stranice', true) ?>
