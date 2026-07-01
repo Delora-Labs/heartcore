@@ -107,7 +107,7 @@ return [
 
     /* ── Dragana (owner) - change requests #14, #16, #17 ───── */
     'dragana' => [
-        'role'  => 'Vlasnica studija · Master trener',
+        'role'  => 'Vlasnica studija',
         'quote' => 'Pilates ne oblikuje samo naše telo, već i naš karakter!',
         'bio' => [
             'Dragana Kanjevac je prvi učitelj klasičnog pilatesa u Srbiji i osnivač HeartCore pilates studija. Njen profesionalni put obeležen je jasnim prelazom iz bankarskog okruženja u oblast pokreta, tela i zdravlja, vođenim dugogodišnjom ličnom strašću prema sportu.',

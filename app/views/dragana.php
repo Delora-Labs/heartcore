@@ -8,8 +8,13 @@
 
   <section class="bg-white" style="padding-bottom:var(--hc-section-py)">
     <div class="hc-container">
-      <div class="grid two-col" style="grid-template-columns:1fr 1.1fr;gap:clamp(40px,7vw,100px);align-items:start">
-        <div <?= hc_reveal() ?>>
+      <div class="dragana-hero">
+        <div class="dragana-hero__header">
+          <div <?= hc_reveal() ?>><?= hc_eyebrow($d['role']) ?></div>
+          <h1 <?= hc_reveal(100, 'hc-title hc-title--xl') ?> style="margin-top:20px">Dragana<br><em>Kanjevac.</em></h1>
+        </div>
+
+        <div class="dragana-hero__media" <?= hc_reveal() ?>>
           <?= hc_photo(['src' => 'dragana', 'ratio' => '4 / 5', 'eager' => true, 'alt' => 'Dragana Kanjevac, vlasnica HeartCore studija']) ?>
 
           <!-- Lineage -->
@@ -28,10 +33,9 @@
             </ol>
           </div>
         </div>
-        <div>
-          <div <?= hc_reveal() ?>><?= hc_eyebrow($d['role']) ?></div>
-          <h1 <?= hc_reveal(100, 'hc-title hc-title--xl') ?> style="margin-top:20px">Dragana<br><em>Kanjevac.</em></h1>
-          <p <?= hc_reveal(250) ?> class="hc-serif hc-italic" style="margin-top:32px;font-size:clamp(22px,2vw,30px);line-height:1.4;color:var(--hc-clay)">„<?= hc_e($d['quote']) ?>“</p>
+
+        <div class="dragana-hero__body">
+          <p <?= hc_reveal(250) ?> class="hc-serif hc-italic" style="font-size:clamp(22px,2vw,30px);line-height:1.4;color:var(--hc-clay)">„<?= hc_e($d['quote']) ?>“</p>
           <?php foreach ($d['bio'] as $i => $para): ?>
             <p <?= hc_reveal(350 + $i * 90) ?> style="margin-top:<?= $i === 0 ? 32 : 20 ?>px;font-size:15px;line-height:1.85;color:var(--hc-grey-700)"><?= hc_e($para) ?></p>
           <?php endforeach; ?>

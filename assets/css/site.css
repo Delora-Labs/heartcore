@@ -356,6 +356,31 @@ ul { margin: 0; }
 .principle-index__no { flex: 0 0 auto; font-family: var(--hc-serif); font-style: italic; font-size: 18px; color: var(--hc-clay); }
 .principle-index__name { font-family: var(--hc-serif); font-weight: 300; font-size: clamp(24px, 2.4vw, 34px); letter-spacing: -0.01em; line-height: 1; }
 
+/* ── Dragana hero (image + intro) ─────────────────────────── */
+.dragana-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  grid-template-areas:
+    "media header"
+    "media body";
+  column-gap: clamp(40px, 7vw, 100px);
+  row-gap: 28px;
+  align-items: start;
+}
+.dragana-hero__header { grid-area: header; }
+.dragana-hero__media  { grid-area: media; }
+.dragana-hero__body   { grid-area: body; }
+@media (max-width: 880px) {
+  .dragana-hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "media"
+      "body";
+    row-gap: 32px;
+  }
+}
+
 /* ── Lineage timeline ─────────────────────────────────────── */
 .lineage { list-style: none; margin: 28px 0 0; padding: 0; }
 .lineage__node { display: flex; align-items: baseline; gap: 24px; }
