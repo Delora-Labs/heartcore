@@ -12,7 +12,7 @@ $eduChildren = ['edu-klasicni', 'edu-savremeni'];
 ?>
 <header class="hc-header">
   <div class="hc-header__inner">
-    <a href="<?= hc_e(hc_url('home')) ?>" aria-label="HeartCore — početna"><?= $logo ?></a>
+    <a href="<?= hc_e(hc_url('home')) ?>" aria-label="HeartCore - početna"><?= $logo ?></a>
 
     <nav class="hc-nav" aria-label="Glavna navigacija">
       <div class="hc-nav__item">
@@ -21,8 +21,8 @@ $eduChildren = ['edu-klasicni', 'edu-savremeni'];
           <svg class="hc-nav__caret" width="8" height="6" viewBox="0 0 8 6" aria-hidden="true"><path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1" fill="none"/></svg>
         </a>
         <div class="hc-nav__dropdown"><div class="hc-nav__dropdown-inner">
-          <a href="<?= hc_e(hc_url('vozdovac')) ?>">HeartCore — Voždovac</a>
-          <a href="<?= hc_e(hc_url('dedinje')) ?>">HeartCore Classical — Dedinje <small>· uskoro</small></a>
+          <a href="<?= hc_e(hc_url('vozdovac')) ?>">HeartCore - Voždovac</a>
+          <span class="hc-nav__soon" aria-disabled="true">HeartCore Classical - Dedinje <small>· uskoro</small></span>
         </div></div>
       </div>
 
@@ -64,8 +64,8 @@ $eduChildren = ['edu-klasicni', 'edu-savremeni'];
   <nav class="hc-mobile__nav" aria-label="Mobilna navigacija">
     <div>
       <div class="hc-mobile__group-label">Studiji</div>
-      <a class="lvl2" href="<?= hc_e(hc_url('vozdovac')) ?>">HeartCore — Voždovac</a>
-      <a class="lvl2" href="<?= hc_e(hc_url('dedinje')) ?>">HeartCore Classical — Dedinje · uskoro</a>
+      <a class="lvl2" href="<?= hc_e(hc_url('vozdovac')) ?>">HeartCore - Voždovac</a>
+      <span class="lvl2 is-soon" aria-disabled="true">HeartCore Classical - Dedinje · uskoro</span>
     </div>
     <div><a class="lvl1" href="<?= hc_e(hc_url('metoda')) ?>">O Pilates metodi</a></div>
     <div><a class="lvl1" href="<?= hc_e(hc_url('about')) ?>">O nama</a></div>

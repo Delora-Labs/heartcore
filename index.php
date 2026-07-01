@@ -1,8 +1,8 @@
 <?php
 /**
- * HeartCore Studio — front controller.
+ * HeartCore Studio - front controller.
  * Flight microframework handles routing, SEO and page rendering.
- * Document root must be this /public directory.
+ * Lives at the project root; the project root is the document root.
  */
 
 declare(strict_types=1);
@@ -10,14 +10,14 @@ declare(strict_types=1);
 // When running under PHP's built-in server, let it serve existing static files.
 if (PHP_SAPI === 'cli-server') {
     $file = __DIR__ . parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-    if (is_file($file)) {
+    if (is_file($file) && basename($file) !== 'index.php') {
         return false;
     }
 }
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
-define('HC_ROOT', dirname(__DIR__));
+define('HC_ROOT', __DIR__);
 $config = require HC_ROOT . '/app/config.php';
 $data   = require HC_ROOT . '/app/data.php';
 
@@ -74,8 +74,8 @@ function hc_render(string $view, string $page, array $seo = [], array $vars = []
 
 Flight::route('GET /', function () {
     hc_render('home', 'home', [
-        'title'       => 'HeartCore Studio — Pilates Beograd | Klasični i savremeni pilates',
-        'description' => 'HeartCore je boutique pilates studio u Beogradu. Klasični i savremeni pilates, individualni i grupni časovi na originalnoj opremi. Voždovac — i uskoro Dedinje.',
+        'title'       => 'HeartCore Studio - Pilates Beograd | Klasični i savremeni pilates',
+        'description' => 'HeartCore je boutique pilates studio u Beogradu. Klasični i savremeni pilates, individualni i grupni časovi na originalnoj opremi. Voždovac, i uskoro Dedinje.',
     ]);
 });
 
@@ -87,7 +87,7 @@ Flight::route('GET /studio/@key', function (string $key) {
     }
     $s = $data['studios'][$key];
     hc_render('studio', $key, [
-        'title'       => $s['name'] . ' — ' . $s['place'] . ' | HeartCore Studio',
+        'title'       => $s['name'] . ' - ' . $s['place'] . ' | HeartCore Studio',
         'description' => mb_substr($s['lead'], 0, 155),
         'robots'      => $s['open'] ? 'index,follow' : 'index,follow',
     ], ['studio' => $s]);
@@ -95,28 +95,28 @@ Flight::route('GET /studio/@key', function (string $key) {
 
 Flight::route('GET /o-pilates-metodi', function () {
     hc_render('metoda', 'metoda', [
-        'title'       => 'O pilates metodi — Jozef Pilates i „Contrology“ | HeartCore',
+        'title'       => 'O pilates metodi - Jozef Pilates i „Contrology“ | HeartCore',
         'description' => 'Šest principa pilatesa, priča o Jozefu Pilatesu i razlika između klasičnog i savremenog pilatesa.',
     ]);
 });
 
 Flight::route('GET /o-nama', function () {
     hc_render('about', 'about', [
-        'title'       => 'O nama — Misija, vizija i naši instruktori | HeartCore',
+        'title'       => 'O nama - Misija, vizija i naši instruktori | HeartCore',
         'description' => 'Naša misija je očuvanje autentične pilates metode. Upoznajte HeartCore studio i naše instruktore.',
     ]);
 });
 
 Flight::route('GET /dragana-kanjevac', function () {
     hc_render('dragana', 'dragana', [
-        'title'       => 'Dragana Kanjevac — Vlasnica studija | HeartCore',
-        'description' => 'Dragana Kanjevac, prvi učitelj klasičnog pilatesa u Srbiji i osnivač HeartCore studija — biografija i reference.',
+        'title'       => 'Dragana Kanjevac - Vlasnica studija | HeartCore',
+        'description' => 'Dragana Kanjevac, prvi učitelj klasičnog pilatesa u Srbiji i osnivač HeartCore studija, biografija i reference.',
     ]);
 });
 
 Flight::route('GET /usluge', function () {
     hc_render('usluge', 'usluge', [
-        'title'       => 'Usluge i cenovnik — Pilates programi | HeartCore',
+        'title'       => 'Usluge i cenovnik - Pilates programi | HeartCore',
         'description' => 'Individualni, duo, trio i grupni pilates časovi, specijalizovani programi i cenovnik HeartCore studija.',
     ]);
 });
@@ -131,14 +131,14 @@ Flight::route('GET /edukacija/@slug', function (string $slug) {
     $key = $map[$slug];
     $edu = $data['education'][$key];
     hc_render('edukacija', $key, [
-        'title'       => $edu['title'] . ' — Edukacija | HeartCore',
+        'title'       => $edu['title'] . ' - Edukacija | HeartCore',
         'description' => mb_substr($edu['intro'], 0, 155),
     ], ['edu' => $edu]);
 });
 
 Flight::route('GET /kontakt', function () {
     hc_render('kontakt', 'kontakt', [
-        'title'       => 'Kontakt — Zakažite čas | HeartCore Studio Beograd',
+        'title'       => 'Kontakt - Zakažite čas | HeartCore Studio Beograd',
         'description' => 'Zakažite probni čas ili nam pišite. Telefon 062 226622, kanjevac.dragana@gmail.com. Studio Voždovac, Beograd.',
     ], ['form' => ['values' => [], 'errors' => [], 'sent' => false]]);
 });

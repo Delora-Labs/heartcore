@@ -3,11 +3,11 @@ $s = $studio;
 $c = $config['contact'];
 
 if (!$s['open']):
-  /* Dedinje — change request #8: not open yet, show only "USKORO". */
+  /* Dedinje - change request #8: not open yet, show only "USKORO". */
 ?>
 <main style="padding-top:0">
   <section class="soon-hero">
-    <div class="soon-hero__bg"><?= hc_photo(['src' => $s['hero'], 'ratio' => 'auto', 'variant' => 'dark', 'eager' => true, 'alt' => $s['name'] . ' — Dedinje', 'style' => 'width:100%;height:100%']) ?></div>
+    <div class="soon-hero__bg"><?= hc_photo(['src' => $s['hero'], 'ratio' => 'auto', 'variant' => 'dark', 'eager' => true, 'alt' => $s['name'] . ' - Dedinje', 'style' => 'width:100%;height:100%']) ?></div>
     <div class="soon-hero__inner hc-container hc-container--narrow">
       <span class="badge-soon" style="background:var(--hc-white)">Uskoro</span>
       <h1 class="hc-title hc-title--xl hc-title--light" style="margin-top:28px"><?= hc_e($s['name']) ?><br><em><?= hc_e($s['place']) ?>.</em></h1>
@@ -38,21 +38,25 @@ if (!$s['open']):
   return;
 endif;
 
-/* Voždovac — full studio page */
+/* Voždovac - full studio page */
 ?>
-<main style="padding-top:100px">
-  <section class="bg-white" style="padding-block:60px 80px">
-    <div class="hc-container">
-      <div class="hc-crumb">
-        <a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span>—</span><span>Studiji</span><span>—</span><span class="cur"><?= hc_e($s['place']) ?></span>
+<main style="padding-top:0">
+  <section style="position:relative;min-height:80vh;color:var(--hc-white)">
+    <div style="position:absolute;inset:0;overflow:hidden">
+      <?= hc_photo(['src' => $s['hero'], 'ratio' => 'auto', 'variant' => 'dark', 'eager' => true, 'alt' => $s['name'] . ' - ' . $s['place'], 'style' => 'width:100%;height:100%']) ?>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.38) 38%,rgba(0,0,0,.82) 100%)"></div>
+    </div>
+    <div style="position:relative;min-height:80vh;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(60px,10vh,120px);padding-top:200px">
+      <div class="hc-container">
+        <div class="hc-crumb hc-crumb--light" style="margin-bottom:32px">
+          <a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span> - </span><span>Studiji</span><span> - </span><span class="cur"><?= hc_e($s['place']) ?></span>
+        </div>
+        <div <?= hc_reveal(150) ?>><?= hc_eyebrow($s['tagline'], true) ?></div>
+        <h1 <?= hc_reveal(300, 'hc-title hc-title--xl hc-title--light') ?> style="margin-top:28px"><?= hc_e($s['name']) ?><br><em><?= hc_e($s['place']) ?>.</em></h1>
+        <p <?= hc_reveal(500) ?> style="margin-top:32px;max-width:680px;font-size:17px;line-height:1.7;color:rgba(250,250,250,.85)"><?= hc_e($s['lead']) ?></p>
       </div>
-      <h1 <?= hc_reveal(0, 'hc-title hc-title--xl') ?> style="margin-top:40px"><?= hc_e($s['name']) ?><br><em><?= hc_e($s['place']) ?>.</em></h1>
-      <p <?= hc_reveal(150) ?> style="margin-top:32px;max-width:680px;font-size:17px;line-height:1.7;color:var(--hc-grey-700)"><?= hc_e($s['lead']) ?></p>
     </div>
   </section>
-
-  <!-- change request #3: real studio photo -->
-  <section><?= hc_photo(['src' => $s['hero'], 'ratio' => '21 / 9', 'variant' => 'dark', 'style' => 'width:100%', 'alt' => $s['name'] . ' — ' . $s['place']]) ?></section>
 
   <section class="hc-section bg-white">
     <div class="hc-container">
@@ -62,8 +66,8 @@ endif;
           <h2 <?= hc_reveal(100) ?> class="hc-serif" style="margin-top:20px;font-size:clamp(36px,4vw,52px);font-weight:300;line-height:1.05">Prostor osmišljen za <em>tišinu i fokus.</em></h2>
         </div>
         <div>
-          <p <?= hc_reveal(150) ?> style="font-size:15px;line-height:1.85;color:var(--hc-grey-700)"><?= hc_e($s['body']) ?> Neutralna paleta, prirodni materijali i dnevna svetlost — sve je tu da telo dobije punu pažnju.</p>
-          <ul <?= hc_reveal(250) ?> class="spec-list">
+          <p <?= hc_reveal(150) ?> style="font-size:15px;line-height:1.85;color:var(--hc-grey-700)"><?= hc_e($s['body']) ?> Neutralna paleta, prirodni materijali i dnevna svetlost, sve je tu da telo dobije punu pažnju.</p>
+          <ul <?= hc_reveal(250, 'spec-list') ?>>
             <?php foreach ($s['spec'] as $item): ?>
               <li><?= hc_diamond(8, 'var(--hc-grey-500)') ?> <?= hc_e($item) ?></li>
             <?php endforeach; ?>
@@ -73,16 +77,16 @@ endif;
     </div>
   </section>
 
-  <!-- GALLERY — change request #4: 2-3 photos of the studio -->
+  <!-- GALLERY - change request #4: 2-3 photos of the studio -->
   <section class="hc-section bg-paper">
     <div class="hc-container">
       <?= hc_eyebrow('Galerija') ?>
-      <h2 class="hc-title hc-title--md" style="margin-top:16px;margin-bottom:56px">Prostor.</h2>
+      <h2 class="hc-title hc-title--md" style="margin-top:16px;margin-bottom:56px">Profesionalni prostor sa potpunom opremom.</h2>
       <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:16px" data-gallery>
-        <?= hc_photo(['src' => $s['photos'][1], 'ratio' => '4 / 3', 'alt' => $s['place'] . ' — studio']) ?>
+        <?= hc_photo(['src' => $s['photos'][1], 'ratio' => '3 / 4', 'alt' => $s['place'] . ' - studio']) ?>
         <div class="grid" style="grid-template-rows:1fr 1fr;gap:16px">
-          <?= hc_photo(['src' => $s['photos'][2], 'ratio' => 'auto', 'variant' => 'sand', 'style' => 'height:100%', 'alt' => $s['place'] . ' — oprema']) ?>
-          <?= hc_photo(['src' => $s['photos'][3], 'ratio' => 'auto', 'style' => 'height:100%', 'alt' => $s['place'] . ' — detalj']) ?>
+          <?= hc_photo(['src' => $s['photos'][2], 'ratio' => 'auto', 'variant' => 'sand', 'style' => 'height:100%', 'alt' => $s['place'] . ' - oprema']) ?>
+          <?= hc_photo(['src' => $s['photos'][3], 'ratio' => 'auto', 'style' => 'height:100%', 'alt' => $s['place'] . ' - detalj']) ?>
         </div>
       </div>
     </div>
@@ -117,7 +121,7 @@ endif;
           <div style="margin-top:40px"><?= hc_btn('kontakt', 'Zakažite čas', 'invert') ?></div>
         </div>
         <div>
-          <iframe title="Mapa — <?= hc_e($s['place']) ?>" width="100%" height="100%" style="border:0;min-height:420px;filter:grayscale(1) contrast(.9) sepia(.15)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          <iframe title="Mapa - <?= hc_e($s['place']) ?>" width="100%" height="100%" style="border:0;min-height:420px;filter:grayscale(1) contrast(.9) sepia(.15)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
             src="https://maps.google.com/maps?q=<?= rawurlencode($s['addr']) ?>&output=embed"></iframe>
         </div>
       </div>

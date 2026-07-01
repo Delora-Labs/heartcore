@@ -2,62 +2,50 @@
 <main style="padding-top:100px">
   <section class="hc-section bg-white" style="padding-top:60px">
     <div class="hc-container">
-      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span>—</span><span class="cur">Usluge i cenovnik</span></div>
+      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span> - </span><span class="cur">Usluge i cenovnik</span></div>
       <div <?= hc_reveal() ?>><?= hc_eyebrow('Usluge', false, 'margin-top:40px;display:block') ?></div>
       <h1 <?= hc_reveal(100, 'hc-title hc-title--xl') ?> style="margin-top:24px">Programi i<br><em>cenovnik.</em></h1>
       <p <?= hc_reveal(200) ?> style="margin-top:32px;font-size:17px;line-height:1.7;color:var(--hc-grey-700);max-width:720px">
-        Pažljivo osmišljeni pilates programi koji kombinuju stručnost, individualni pristup i najviše standarde rada — prilagođeni različitim nivoima iskustva i potrebama vežbača.
+        Pažljivo osmišljeni pilates programi koji kombinuju stručnost, individualni pristup i najviše standarde rada, prilagođeni različitim nivoima iskustva i potrebama vežbača.
       </p>
     </div>
   </section>
 
-  <!-- SERVICE LIST -->
+  <!-- SERVICES + PRICES (one responsive table; cards on mobile) -->
   <section class="hc-section bg-paper">
     <div class="hc-container">
-      <?= hc_eyebrow('Pregled usluga') ?>
-      <h2 class="hc-title hc-title--md" style="margin-top:16px;margin-bottom:56px">Šta nudimo.</h2>
-      <div>
-        <?php foreach ($data['services'] as $i => $s): ?>
-          <div class="service-row hc-fade" data-delay="<?= $i * 40 ?>">
-            <span class="service-row__no"><?= sprintf('%02d', $i + 1) ?></span>
-            <h3><?= hc_e($s['name']) ?></h3>
-            <p><?= hc_e($s['desc']) ?></p>
-          </div>
-        <?php endforeach; ?>
+      <div style="margin-bottom:48px">
+        <?= hc_eyebrow('Pregled usluga i cene') ?>
+        <h2 class="hc-title hc-title--md" style="margin-top:16px">Šta nudimo.</h2>
       </div>
-    </div>
-  </section>
 
-  <!-- PRICING -->
-  <section class="hc-section bg-white">
-    <div class="hc-container">
-      <div style="margin-bottom:56px">
-        <?= hc_eyebrow('Cenovnik') ?>
-        <h2 class="hc-title hc-title--md" style="margin-top:16px">Cene.</h2>
-      </div>
-      <div class="price-grid">
-        <?php
-          $tables = [
-            ['Individualni i duo', 'Klasični i savremeni', $data['prices_individual']],
-            ['Grupni i specijalizovani', 'Programi u malim grupama', $data['prices_group']],
-          ];
-          foreach ($tables as [$title, $sub, $rows]):
-        ?>
-          <div <?= hc_reveal() ?>>
-            <div class="price-block__head"><small><?= hc_e($sub) ?></small><h3><?= hc_e($title) ?></h3></div>
-            <table class="price-table">
-              <thead><tr><th>Program</th><th class="dur" style="text-align:center;width:110px">Jedinica</th><th class="price" style="text-align:right;width:130px">Cena</th></tr></thead>
-              <tbody>
-                <?php foreach ($rows as [$prog, $dur, $price]): ?>
-                  <tr><td><?= hc_e($prog) ?></td><td class="dur"><?= hc_e($dur) ?></td><td class="price"><?= hc_e($price) ?></td></tr>
+      <table class="svc-table">
+        <thead>
+          <tr><th class="svc-table__c-name">Usluga</th><th class="svc-table__c-desc">Opis</th><th class="svc-table__c-price">Cena</th></tr>
+        </thead>
+        <tbody>
+          <?php $prevGroup = null; foreach ($data['pricing'] as $i => $p): ?>
+            <?php if ($p['group'] !== $prevGroup): $prevGroup = $p['group']; ?>
+              <tr class="svc-table__group"><td colspan="3"><?= hc_e($p['group']) ?></td></tr>
+            <?php endif; ?>
+            <tr class="svc-row hc-fade" data-delay="<?= ($i % 6) * 40 ?>">
+              <td data-label="Usluga" class="svc-row__name"><?= hc_e($p['name']) ?></td>
+              <td data-label="Opis" class="svc-row__desc"><?= hc_e($p['desc']) ?></td>
+              <td data-label="Cena" class="svc-row__price">
+                <?php foreach ($p['options'] as [$unit, $price]): ?>
+                  <span class="svc-price">
+                    <?php if ($unit !== ''): ?><span class="svc-price__unit"><?= hc_e($unit) ?></span><?php endif; ?>
+                    <span class="svc-price__amt"><?= hc_e($price) ?></span>
+                  </span>
                 <?php endforeach; ?>
-              </tbody>
-            </table>
-          </div>
-        <?php endforeach; ?>
-      </div>
-      <p <?= hc_reveal(200) ?> style="margin-top:56px;font-size:13px;line-height:1.8;color:var(--hc-grey-500);text-align:center;max-width:760px;margin-inline:auto">
-        Trio časovi — klasični pilates dostupni su na upit. Za sve programe i pakete kontaktirajte studio radi rasporeda i dostupnih termina.
+              </td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+
+      <p <?= hc_reveal(200) ?> style="margin-top:48px;font-size:13px;line-height:1.8;color:var(--hc-grey-500);max-width:760px">
+        Za sve programe i pakete kontaktirajte studio radi rasporeda i dostupnih termina.
       </p>
     </div>
   </section>

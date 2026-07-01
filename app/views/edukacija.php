@@ -5,14 +5,14 @@ $other = $data['education'][$otherKey];
 <main style="padding-top:100px">
   <section class="hc-section bg-white" style="padding-top:60px">
     <div class="hc-container">
-      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span>—</span><span>Edukacija</span><span>—</span><span class="cur"><?= hc_e($e['title']) ?></span></div>
+      <div class="hc-crumb"><a href="<?= hc_e(hc_url('home')) ?>">Početna</a><span> - </span><span>Edukacija</span><span> - </span><span class="cur"><?= hc_e($e['title']) ?></span></div>
       <div <?= hc_reveal() ?>><?= hc_eyebrow($e['subtitle'], false, 'margin-top:40px;display:block') ?></div>
-      <h1 <?= hc_reveal(100, 'hc-title hc-title--xl') ?> style="margin-top:24px;max-width:1100px"><?= hc_e($e['title']) ?>.</h1>
+      <h1 <?= hc_reveal(100, 'hc-title hc-title--lg') ?> style="margin-top:24px;max-width:1200px"><?= hc_e($e['title']) ?>.</h1>
       <p <?= hc_reveal(200) ?> style="margin-top:32px;font-size:17px;line-height:1.75;color:var(--hc-grey-700);max-width:740px"><?= hc_e($e['intro']) ?></p>
 
       <div <?= hc_reveal(350) ?> class="edu-meta" style="margin-top:64px">
         <?php foreach ($e['meta'] as [$k, $v]): ?>
-          <div><small><?= hc_e($k) ?></small><b><?= hc_e($v) ?></b></div>
+          <div><small><?= hc_e($k) ?></small> <b><?= hc_e($v) ?></b></div>
         <?php endforeach; ?>
       </div>
     </div>
@@ -21,7 +21,7 @@ $other = $data['education'][$otherKey];
   <section class="hc-section bg-paper">
     <div class="hc-container">
       <?= hc_eyebrow('Program') ?>
-      <h2 class="hc-title hc-title--md" style="margin-top:16px;margin-bottom:56px">Šest modula.</h2>
+      <h2 class="hc-title hc-title--md" style="margin-top:16px;margin-bottom:56px;margin-left:-3px">Šest modula.</h2>
       <div class="edu-modules">
         <?php foreach ($e['modules'] as $i => [$no, $title, $body]): ?>
           <div class="edu-module hc-fade" data-delay="<?= $i * 70 ?>">

@@ -2,7 +2,7 @@
 /**
  * Contact form handler. Validates server-side, appends the message to a local
  * log (storage/contact-messages.log) and re-renders the contact page with the
- * success state — no live mail delivery required (works on WAMP out of the box).
+ * success state - no live mail delivery required (works on WAMP out of the box).
  */
 
 function hc_handle_contact(): void
@@ -18,7 +18,7 @@ function hc_handle_contact(): void
         'poruka'  => trim((string) $in->poruka),
     ];
 
-    // Honeypot — bots fill hidden fields.
+    // Honeypot - bots fill hidden fields.
     $trap = trim((string) $in->website);
 
     $errors = [];
@@ -50,7 +50,7 @@ function hc_handle_contact(): void
     }
 
     hc_render('kontakt', 'kontakt', [
-        'title'  => 'Kontakt — Zakažite čas | HeartCore Studio Beograd',
+        'title'  => 'Kontakt - Zakažite čas | HeartCore Studio Beograd',
         'robots' => 'noindex,follow',
     ], ['form' => ['values' => $values, 'errors' => $errors, 'sent' => $sent]]);
 }
