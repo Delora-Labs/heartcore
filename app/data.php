@@ -17,13 +17,11 @@ return [
             'place'   => 'Voždovac',
             'eyebrow' => 'Studio I · Voždovac',
             'tagline' => 'Matični studio.',
-            'lead'    => 'Prvi studio u okviru HeartCore koncepta, osnovan 2020. godine. Mesto gde se pilates metoda primenjuje sistemski i dosledno, sa fokusom na zdrav pokret, preciznost i dugoročne rezultate. Ovde vežbate i savremeni i klasični pilates.',
-            'body'    => 'Prostor osmišljen za fokus i povezivanje uma i tela. Neutralna paleta, prirodni materijali i dnevna svetlost, sve je tu da telo dobije punu pažnju, a um se umiri pre nego što praksa počne.',
+            'lead'    => 'Prvi studio u okviru HeartCore koncepta, osnovan 2020. godine. Mesto gde se pilates metoda primenjuje sistemski i dosledno, sa fokusom na zdrav pokret, preciznost i dugoročne rezultate. Ovde možete vežbati i savremeni i klasični pilates.',
+            'body'    => 'Prostor osmišljen za fokus i povezivanje uma i tela. Studio je obasjan prirodnom svetlošću sa pogledom na ceo grad i Hram Svetog Save. Naš fokus je na znanju uz korišćenje najkvalitetnije opreme. Reformeri su jednog od najpoznatiji brandova savremene opreme Balanced Body, a klasična  oprema branda Tecno pilates.',
             'addr'    => 'Vojvode Stepe 259, 11000 Beograd',
             'spec'    => [
-                'Reformer', 'Mat', 'Cadillac', 'Wunda Chair', 'High Chair', 'Baby Chair',
-                'Big Barrel', 'Spine Corrector', 'Small Barrel', 'Pedi Pole', 'Foot Corrector',
-                'Neck Stretcher', 'Toe Stretcher', 'Push Up devices', 'Breath-a-sizer', 'Sand bag',
+                 'Reformer', 'Mat', 'Cadillac', 'Wunda Chair', 'Combo Chair', 'Big Barrel', 'Spine Corrector', 'Pedi Pole',
             ],
             'photos'  => ['studio-2', 'studio-1', 'studio-2', 'studio-4'],
             'hero'    => 'studio-vozdovac-wide',
@@ -32,12 +30,12 @@ return [
             'key'     => 'dedinje',
             'open'    => false,
             'name'    => 'HeartCore Classical',
-            'place'   => 'Dedinje',
-            'eyebrow' => 'Studio II · Dedinje',
+            'place'   => 'Uskoro',
+            'eyebrow' => 'Studio II · Uskoro',
             'tagline' => 'Klasičan studio.',
-            'lead'    => 'Najnovija etapa razvoja HeartCore koncepta, klasičan studio u srcu Dedinja, u blizini američke i izraelske ambasade. Mesto gde ćete, uz korišćenje svih pilates aparatusa, osetiti dubinu pilates metode i ojačati ne samo telo, već i um.',
+            'lead'    => 'Najnovija etapa razvoja HeartCore koncepta, klasičan studio posvećen isključivo klasičnom pilatesu. Mesto gde ćete, uz korišćenje svih pilates aparatusa, osetiti dubinu pilates metode i ojačati ne samo telo, već i um. Tačnu lokaciju objavljujemo uskoro.',
             'body'    => 'Prostor gde se dugovečnost i zdravlje tretiraju kao najveći luksuz.',
-            'addr'    => 'Dedinje, Beograd',
+            'addr'    => 'Uskoro',
             'spec'    => [
                 'Svi pilates aparatusi',
                 'Isključivo klasični pilates',
@@ -83,7 +81,7 @@ return [
         ],
         'classical' => [
             'title' => 'Klasični pilates',
-            'desc'  => 'Originalni metod koji je razvio Jozef Pilates. Zasniva se na upotrebi svih pilates aparatusa, jasno definisanom redosledu vežbi, preciznoj tehnici i doslednosti u izvođenju. Svaka vežba ima tačno određenu formu, tempo i tranziciju, sa jasno definisanim nivoima od osnovnog do visoko naprednog, osnove se ne smeju preskakati.',
+            'desc'  => 'Originalni metod koji je razvio Jozef Pilates. Zasniva se na upotrebi svih pilates aparatusa, jasno definisanom redosledu vežbi, preciznoj tehnici i doslednosti u izvođenju. Svaka vežba ima tačno određenu formu, tempo i tranziciju, sa jasno definisanim nivoima od osnovnog do visoko naprednog, osnove se ne smeju preskakati. Suština je u tačnosti, preciznosti i kvalitetu pokreta, ne u broju ponavljanja.',
             'points' => [
                 'Postoji jasan redosled vežbi',
                 'Ista težina opruga',
@@ -137,12 +135,6 @@ return [
     /* ── Instructors - change request #18: no "years of work" ── */
     'team' => [
         [
-            'name' => 'Iva',
-            'role' => 'Instruktor savremenog pilatesa',
-            'photo' => 'jana-canva',
-            'bio'  => 'Iva je ljubav prema pilatesu otkrila prvo kao dugogodišnji vežbač kod Dragane u studiju. Vodi grupne časove savremenog pilatesa koji donose prepoznatljivu energiju, pozitivnu atmosferu i motivaciju. Završila je osnovne studije psihologije i trenutno je na master studijama, što joj omogućava da duboko razume potrebe svojih klijenata i prilagodi svaki čas njihovim individualnim ciljevima. Iva se fokusira na to da vežbači, kroz svaki pokret, dožive puni potencijal svog tela, dok istovremeno razvijaju mentalnu snagu.',
-        ],
-        [
             'name' => 'Milena',
             'role' => 'Instruktor savremenog · učitelj klasičnog pilatesa u obuci',
             'photo' => 'team-milena',
@@ -154,6 +146,12 @@ return [
             'photo' => 'team-jana',
             'bio'  => 'Jana je instruktorka sa strašću za pilatesom, koja svojim pristupom inspiriše i motiviše svakog vežbača. Vodi grupne časove savremenog pilatesa, a njeni časovi donose prepoznatljivu energiju, pozitivnu atmosferu i motivaciju. Jana je trenutno na edukaciji za klasični pilates, što njenim časovima daje posebnu preciznost, fokus na to da vežbači pravilno izvode vežbe i razumeju svaki pokret. Kroz motivaciju i pažljiv pristup, njeni časovi ostavljaju vežbače sa snažnim osećajem postignuća, samopouzdanja i zadovoljstva nakon svakog treninga.',
         ],
+        [
+            'name' => 'Iva',
+            'role' => 'Instruktor savremenog pilatesa',
+            'photo' => 'jana-canva',
+            'bio'  => 'Iva je ljubav prema pilatesu otkrila prvo kao dugogodišnji vežbač kod Dragane u studiju. Vodi grupne časove savremenog pilatesa koji donose prepoznatljivu energiju, pozitivnu atmosferu i motivaciju. Završila je osnovne studije psihologije i trenutno je na master studijama, što joj omogućava da duboko razume potrebe svojih klijenata i prilagodi svaki čas njihovim individualnim ciljevima. Iva se fokusira na to da vežbači, kroz svaki pokret, dožive puni potencijal svog tela, dok istovremeno razvijaju mentalnu snagu.',
+        ]
     ],
 
     /* ── Mission & vision ───────────────────────────────────── */
@@ -170,9 +168,9 @@ return [
     // Unified services + prices table. Each row: group, name, desc, and one or
     // more [jedinica, cena] options. Rendered as a table (desktop) / cards (mobile).
     'pricing' => [
-        ['group' => 'Individualni i duo', 'name' => 'Individualni - klasični pilates', 'desc' => 'Časovi prema individualnim potrebama klijenata, rad na svim pilates aparatusima.', 'options' => [['1 čas', '7.000 RSD'], ['8 časova', '57.000 RSD']]],
+        ['group' => 'Individualni i duo', 'name' => 'Individualni - klasični pilates', 'desc' => 'Časovi prema individualnim potrebama klijenata, rad na svim pilates aparatusima.', 'options' => [['', 'Na upit']]],
         ['group' => 'Individualni i duo', 'name' => 'Individualni - savremeni pilates', 'desc' => 'Časovi prema individualnim potrebama klijenata, rad na reformeru.', 'options' => [['1 čas', '4.800 RSD'], ['8 časova', '31.000 RSD']]],
-        ['group' => 'Individualni i duo', 'name' => 'Duo - klasični pilates', 'desc' => 'Dve osobe približno sličnog nivoa, uz upotrebu svih pilates aparatusa.', 'options' => [['1 čas', '10.000 RSD'], ['8 časova', '79.000 RSD']]],
+        ['group' => 'Individualni i duo', 'name' => 'Duo - klasični pilates', 'desc' => 'Dve osobe približno sličnog nivoa, uz upotrebu svih pilates aparatusa.', 'options' => [['', 'Na upit']]],
         ['group' => 'Individualni i duo', 'name' => 'Duo - savremeni pilates', 'desc' => 'Dve osobe približno sličnog nivoa, uz upotrebu reformera.', 'options' => [['1 čas', '7.000 RSD'], ['8 časova', '43.000 RSD']]],
         ['group' => 'Individualni i duo', 'name' => 'Trio - klasični pilates', 'desc' => 'Tri osobe približno sličnog nivoa, uz upotrebu svih pilates aparatusa.', 'options' => [['', 'Na upit']]],
         ['group' => 'Grupni i specijalizovani', 'name' => 'Grupni - savremeni pilates', 'desc' => 'Grupe do 5 vežbača, vežbanje na reformeru.', 'options' => [['8 časova', '12.000 RSD'], ['10 časova', '14.000 RSD'], ['12 časova', '16.000 RSD']]],
@@ -194,7 +192,7 @@ return [
                 ['Pristup', 'Klasični sistem'],
                 ['Format', 'Moduli + asistiranje'],
                 ['Lokacija', 'HeartCore - Voždovac'],
-                ['Naknada', 'Na zahtev'],
+                ['Cena', 'Na zahtev'],
             ],
             'modules' => [
                 ['I', 'Anatomija i biomehanika', 'Funkcionalna anatomija, mišićni lanci, biomehanika kičme i karlice.'],
@@ -214,7 +212,7 @@ return [
                 ['Pristup', 'Savremeni sistem'],
                 ['Format', 'Moduli + praktikum'],
                 ['Lokacija', 'HeartCore - Voždovac'],
-                ['Naknada', 'Na zahtev'],
+                ['Cena', 'Na zahtev'],
             ],
             'modules' => [
                 ['I', 'Funkcionalna anatomija', 'Mišićna integracija, fascijalni sistem, posturalni obrasci.'],

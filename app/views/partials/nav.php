@@ -22,7 +22,7 @@ $eduChildren = ['edu-klasicni', 'edu-savremeni'];
         </a>
         <div class="hc-nav__dropdown"><div class="hc-nav__dropdown-inner">
           <a href="<?= hc_e(hc_url('vozdovac')) ?>">HeartCore - Voždovac</a>
-          <span class="hc-nav__soon" aria-disabled="true">HeartCore Classical - Dedinje <small>· uskoro</small></span>
+          <span class="hc-nav__soon" aria-disabled="true">HeartCore Classical <small>· uskoro</small></span>
         </div></div>
       </div>
 
@@ -65,7 +65,7 @@ $eduChildren = ['edu-klasicni', 'edu-savremeni'];
     <div>
       <div class="hc-mobile__group-label">Studiji</div>
       <a class="lvl2" href="<?= hc_e(hc_url('vozdovac')) ?>">HeartCore - Voždovac</a>
-      <span class="lvl2 is-soon" aria-disabled="true">HeartCore Classical - Dedinje · uskoro</span>
+      <span class="lvl2 is-soon" aria-disabled="true">HeartCore Classical · uskoro</span>
     </div>
     <div><a class="lvl1" href="<?= hc_e(hc_url('metoda')) ?>">O Pilates metodi</a></div>
     <div><a class="lvl1" href="<?= hc_e(hc_url('about')) ?>">O nama</a></div>

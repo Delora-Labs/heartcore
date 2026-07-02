@@ -60,7 +60,7 @@ $val = fn($k) => hc_e($v[$k] ?? '');
               <div class="field">
                 <label>Studio</label>
                 <div class="studio-toggle" data-studio-toggle>
-                  <?php foreach ([['vozdovac', 'Voždovac'], ['dedinje', 'Dedinje'], ['bilo-koji', 'Bilo koji']] as [$k, $l]): ?>
+                  <?php foreach ([['vozdovac', 'Voždovac'], ['dedinje', 'Uskoro'], ['bilo-koji', 'Bilo koji']] as [$k, $l]): ?>
                     <button type="button" data-value="<?= $k ?>" class="<?= $studio === $k ? 'is-on' : '' ?>"><?= hc_e($l) ?></button>
                   <?php endforeach; ?>
                 </div>
@@ -97,9 +97,8 @@ $val = fn($k) => hc_e($v[$k] ?? '');
               </div>
             </div>
             <div class="contact-block">
-              <h3>HeartCore Classical - Dedinje</h3>
+              <h3>HeartCore Classical</h3>
               <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px">
-                <div class="row"><span>Adresa</span><span>Dedinje, Beograd</span></div>
                 <div class="row"><span>Status</span><span>Uskoro otvaramo</span></div>
               </div>
             </div>

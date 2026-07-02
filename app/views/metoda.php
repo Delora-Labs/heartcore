@@ -43,7 +43,7 @@
         </div>
         <div>
           <div <?= hc_reveal() ?>><?= hc_eyebrow('Tvorac metode') ?></div>
-          <h2 <?= hc_reveal(100) ?> class="hc-serif" style="margin-top:20px;font-size:clamp(38px,4.6vw,64px);font-weight:300;line-height:1.05">Jozef Pilates i njegova<br><em>„Contrology“.</em></h2>
+          <h2 <?= hc_reveal(100) ?> class="hc-serif" style="margin-top:20px;font-size:clamp(38px,4.6vw,64px);font-weight:300;line-height:1.05">Jozef Pilates i <em>„Contrology“.</em></h2>
           <?php foreach ($m['joseph'] as $i => $para): ?>
             <p <?= hc_reveal(250 + $i * 100) ?> style="margin-top:<?= $i === 0 ? 32 : 20 ?>px;font-size:16px;line-height:1.8;color:var(--hc-grey-700)"><?= hc_e($para) ?></p>
           <?php endforeach; ?>
@@ -73,7 +73,7 @@
       </div>
 
       <div <?= hc_reveal(150) ?> class="notice" style="margin-top:48px">
-        <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--hc-grey-700);margin-bottom:10px">Pilates aparatusi</div>
+        <div style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--hc-grey-700);margin-bottom:10px">Pilates aparatusi u klasičnom pilatesu</div>
         <p style="font-size:14px;line-height:1.7;color:var(--hc-grey-700)"><?= hc_e($m['apparatus']) ?></p>
       </div>
     </div>
