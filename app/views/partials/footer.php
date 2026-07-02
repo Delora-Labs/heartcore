@@ -35,8 +35,8 @@ $icons = [
             <p class="hc-footer__small">Vojvode Stepe 259<br>11000 Beograd</p>
           </div>
           <div>
-            <div class="hc-footer__loc-name">HeartCore Classical - Dedinje</div>
-            <p class="hc-footer__small">Dedinje, Beograd<br><em>Uskoro</em></p>
+            <div class="hc-footer__loc-name">HeartCore Classical</div>
+            <p class="hc-footer__small"><em>Uskoro</em></p>
           </div>
         </div>
       </div>

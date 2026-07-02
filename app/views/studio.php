@@ -7,10 +7,10 @@ if (!$s['open']):
 ?>
 <main style="padding-top:0">
   <section class="soon-hero">
-    <div class="soon-hero__bg"><?= hc_photo(['src' => $s['hero'], 'ratio' => 'auto', 'variant' => 'dark', 'eager' => true, 'alt' => $s['name'] . ' - Dedinje', 'style' => 'width:100%;height:100%']) ?></div>
+    <div class="soon-hero__bg"><?= hc_photo(['src' => $s['hero'], 'ratio' => 'auto', 'variant' => 'dark', 'eager' => true, 'alt' => $s['name'] . ' - uskoro', 'style' => 'width:100%;height:100%']) ?></div>
     <div class="soon-hero__inner hc-container hc-container--narrow">
       <span class="badge-soon" style="background:var(--hc-white)">Uskoro</span>
-      <h1 class="hc-title hc-title--xl hc-title--light" style="margin-top:28px"><?= hc_e($s['name']) ?><br><em><?= hc_e($s['place']) ?>.</em></h1>
+      <h1 class="hc-title hc-title--xl hc-title--light" style="margin-top:28px"><?= hc_e($s['name']) ?></h1>
       <p style="margin-top:32px;max-width:620px;margin-inline:auto;font-size:16px;line-height:1.75;color:rgba(250,250,250,.85)">
         <?= hc_e($s['lead']) ?>
       </p>
@@ -24,7 +24,7 @@ if (!$s['open']):
   <section class="hc-section bg-white">
     <div class="hc-container hc-container--tight" style="text-align:center">
       <?= hc_eyebrow($s['eyebrow']) ?>
-      <h2 class="hc-title hc-title--sm" style="margin-top:20px">Klasičan studio<br><em>u srcu Dedinja.</em></h2>
+      <h2 class="hc-title hc-title--sm" style="margin-top:20px">Klasičan studio<br><em>uskoro.</em></h2>
       <p style="margin-top:28px;font-size:16px;line-height:1.85;color:var(--hc-grey-700)"><?= hc_e($s['body']) ?></p>
       <ul class="check-list" style="margin-top:36px;display:inline-flex;text-align:left">
         <?php foreach ($s['spec'] as $item): ?>
@@ -66,7 +66,7 @@ endif;
           <h2 <?= hc_reveal(100) ?> class="hc-serif" style="margin-top:20px;font-size:clamp(36px,4vw,52px);font-weight:300;line-height:1.05">Prostor osmišljen za <em>tišinu i fokus.</em></h2>
         </div>
         <div>
-          <p <?= hc_reveal(150) ?> style="font-size:15px;line-height:1.85;color:var(--hc-grey-700)"><?= hc_e($s['body']) ?> Neutralna paleta, prirodni materijali i dnevna svetlost, sve je tu da telo dobije punu pažnju.</p>
+          <p <?= hc_reveal(150) ?> style="font-size:15px;line-height:1.85;color:var(--hc-grey-700)"><?= hc_e($s['body']) ?></p>
           <ul <?= hc_reveal(250, 'spec-list') ?>>
             <?php foreach ($s['spec'] as $item): ?>
               <li><?= hc_diamond(8, 'var(--hc-grey-500)') ?> <?= hc_e($item) ?></li>
@@ -81,7 +81,6 @@ endif;
   <section class="hc-section bg-paper">
     <div class="hc-container">
       <?= hc_eyebrow('Galerija') ?>
-      <h2 class="hc-title hc-title--md" style="margin-top:16px;margin-bottom:56px">Profesionalni prostor sa potpunom opremom.</h2>
       <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:16px" data-gallery>
         <?= hc_photo(['src' => $s['photos'][1], 'ratio' => '3 / 4', 'alt' => $s['place'] . ' - studio']) ?>
         <div class="grid" style="grid-template-rows:1fr 1fr;gap:16px">
@@ -138,7 +137,7 @@ endif;
           <?= hc_photo(['src' => $other['photos'][0], 'ratio' => '3 / 2', 'alt' => $other['name']]) ?>
           <div style="display:flex;justify-content:space-between;align-items:center;gap:24px">
             <div>
-              <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--hc-grey-500)"><?= hc_e($other['place']) ?> · uskoro</span>
+              <span style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--hc-grey-500)">Studio II · uskoro</span>
               <h3 class="hc-serif" style="margin-top:8px;font-size:clamp(32px,4vw,60px);font-weight:300"><?= hc_e($other['name']) ?></h3>
             </div>
             <span style="font-size:12px;letter-spacing:.2em;text-transform:uppercase">Pogledajte →</span>

@@ -31,7 +31,7 @@
             </div>
             <div>
               <div style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,250,250,.5)">Studio II</div>
-              <div class="hc-serif" style="font-size:22px;margin-top:6px">Dedinje · uskoro</div>
+              <div class="hc-serif" style="font-size:22px;margin-top:6px">Uskoro</div>
             </div>
             <div>
               <div style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,250,250,.5)">Otvoreno</div>
@@ -162,7 +162,7 @@
       <div <?= hc_reveal() ?>><?= hc_diamond(12, 'var(--hc-grey-700)') ?></div>
       <h2 <?= hc_reveal(150, 'hc-title hc-title--md') ?> style="margin-top:32px">Prvi čas je<br><em>uvod u praksu.</em></h2>
       <p <?= hc_reveal(300) ?> style="margin-top:28px;max-width:540px;margin-inline:auto;font-size:16px;line-height:1.75;color:var(--hc-grey-700)">
-        Razgovor o vašem telu, ciljevima i ritmu, pre nego što počnemo. Javite nam se i preporučićemo program koji vam najviše odgovara.
+        Razgovor o vašem telu, ciljevima i ritmu, pre nego što počnemo. Dodjite da osetite telo na potpuno drugačiji način.
       </p>
       <div <?= hc_reveal(450) ?> style="margin-top:44px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
         <?= hc_btn('kontakt', 'Zakažite čas') ?>

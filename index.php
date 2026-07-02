@@ -75,7 +75,7 @@ function hc_render(string $view, string $page, array $seo = [], array $vars = []
 Flight::route('GET /', function () {
     hc_render('home', 'home', [
         'title'       => 'HeartCore Studio - Pilates Beograd | Klasični i savremeni pilates',
-        'description' => 'HeartCore je boutique pilates studio u Beogradu. Klasični i savremeni pilates, individualni i grupni časovi na originalnoj opremi. Voždovac, i uskoro Dedinje.',
+        'description' => 'HeartCore je boutique pilates studio u Beogradu. Klasični i savremeni pilates, individualni i grupni časovi na originalnoj opremi. Studio Voždovac, i uskoro drugi studio.',
     ]);
 });
 

@@ -458,7 +458,7 @@ ul { margin: 0; }
 .contact-block .row span:first-child { width: 70px; flex: 0 0 70px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--hc-grey-500); padding-top: 2px; }
 .contact-block .row span:last-child { color: var(--hc-grey-700); }
 
-.notice { padding: 14px 18px; background: var(--hc-cream); border-left: 2px solid var(--hc-clay); font-size: 14px; color: var(--hc-grey-700); }
+.notice { margin-top: 24px; padding: 14px 18px; background: var(--hc-cream); border-left: 2px solid var(--hc-clay); font-size: 14px; color: var(--hc-grey-700); }
 
 /* coming-soon (Dedinje) */
 .soon-hero { min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; }
