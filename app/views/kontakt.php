@@ -60,7 +60,7 @@ $val = fn($k) => hc_e($v[$k] ?? '');
               <div class="field">
                 <label>Studio</label>
                 <div class="studio-toggle" data-studio-toggle>
-                  <?php foreach ([['vozdovac', 'Voždovac'], ['dedinje', 'Uskoro'], ['bilo-koji', 'Bilo koji']] as [$k, $l]): ?>
+                  <?php foreach ([['vozdovac', 'Voždovac']] as [$k, $l]): ?>
                     <button type="button" data-value="<?= $k ?>" class="<?= $studio === $k ? 'is-on' : '' ?>"><?= hc_e($l) ?></button>
                   <?php endforeach; ?>
                 </div>
