@@ -9,7 +9,7 @@
 
     <div style="position:relative;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:clamp(28px,4.5vh,56px);padding-top:clamp(88px,12vh,140px)">
       <div class="hc-container">
-        <div <?= hc_reveal(150) ?>><?= hc_eyebrow('Boutique pilates · Beograd', true) ?></div>
+        <div <?= hc_reveal(150) ?>><?= hc_eyebrow('Pilates studio · Beograd', true) ?></div>
         <h1 <?= hc_reveal(300, 'hc-title hc-title--xl hc-title--light') ?> style="margin-top:clamp(16px,2.4vh,28px);max-width:1100px;font-size:clamp(46px,min(10.5vw,12.5vh),168px)">
           Pokret koji te<br><em>vraća sebi.</em>
         </h1>
